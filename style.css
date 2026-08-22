@@ -1,25 +1,87 @@
 /* ================================
+   FONT
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+
+/* ================================
+   BASIC
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+
+    background: #FFF3E8;
+    color: #3D2A20;
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: calc(100% - 80px);
+    max-width: 800px;
+
+    margin: 40px auto;
+    padding: 40px;
+
+    background: #FFE2CC;
+    border-radius: 30px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+h1 {
+    margin: 0 0 35px 0;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    text-align: center;
+    color: #000000;
+}
+
+
+/* ================================
    FORM
 ================================ */
 
-/* แต่ละชุดของ Label + Input มีระยะห่างเท่ากัน */
 .form-group {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
-/* ชื่อหัวข้อของช่องกรอก */
+
+/* LABEL */
+
 label {
     display: block;
     width: 100%;
 
-    margin: 0 0 10px 0;
+    margin-bottom: 20px;
 
     font-size: 16px;
     font-weight: 500;
 }
 
-/* ช่องกรอก */
+
+/* INPUT */
+
 input {
     display: block;
 
@@ -40,14 +102,23 @@ input {
     outline: none;
 }
 
-/* ปุ่มคำนวณ */
+
+input:focus {
+    border: 2px solid #E8751A;
+}
+
+
+/* ================================
+   CALCULATE BUTTON
+================================ */
+
 button {
     display: block;
 
     width: 100%;
     height: 70px;
 
-    margin-top: 0;
+    margin-top: 20px;
     padding: 14px 20px;
 
     font-family: "Kanit", sans-serif;
@@ -61,4 +132,74 @@ button {
     border-radius: 20px;
 
     cursor: pointer;
+}
+
+
+button:hover {
+    background: #D95F02;
+}
+
+
+/* ================================
+   RESULT
+================================ */
+
+#result {
+    display: none;
+
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+
+    text-align: center;
+
+    background: #FFF8F2;
+    border-radius: 20px;
+}
+
+
+#result.show {
+    display: block;
+}
+
+
+#result strong {
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #D95F02;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 30px);
+
+        margin: 20px auto;
+        padding: 25px 20px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        height: 65px;
+    }
+
+    button {
+        height: 65px;
+    }
 }
