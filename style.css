@@ -28,6 +28,9 @@ body {
 
     background: #FFE2CC; /* สีพื้นหลังกล่อง */
     border-radius: 30px; /* ทำมุมให้มน */
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.18),
+        0 5px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* หัวข้อ คำนวณราคาทอง */
@@ -72,6 +75,9 @@ input {
     border-radius: 18px; /* มุมมน */
 
     outline: none; /* เอาเส้นขอบเริ่มต้นของเบราว์เซอร์ออก */
+    line-height: 1.35;
+
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.25);
 }
 
 /* ตอนกำลังเลือกช่องกรอก */
@@ -96,7 +102,7 @@ button {
 
     border: none; /* ไม่มีเส้นขอบ */
     border-radius: 20px; /* มุมมน */
-
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.28);
     cursor: pointer; /* เมาส์เป็นรูปมือเมื่อวางบนปุ่ม */
 }
 
