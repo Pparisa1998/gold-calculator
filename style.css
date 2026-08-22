@@ -63,24 +63,23 @@ h1 {
 
 .form-group {
     width: 100%;
-    margin-bottom: 20px;
+
+    /* ระยะจากช่องกรอกด้านล่าง
+       ไปยังข้อความของช่องถัดไป */
+    margin-bottom: 24px;
 }
-
-
-/* LABEL */
 
 label {
     display: block;
     width: 100%;
 
-    margin-bottom: 20px;
+    /* ระยะจากข้อความ
+       ลงมาถึงช่องกรอก */
+    margin: 0 0 24px 0;
 
     font-size: 16px;
     font-weight: 500;
 }
-
-
-/* INPUT */
 
 input {
     display: block;
@@ -101,12 +100,6 @@ input {
 
     outline: none;
 }
-
-
-input:focus {
-    border: 2px solid #E8751A;
-}
-
 
 /* ================================
    CALCULATE BUTTON
