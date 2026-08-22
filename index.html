@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>คำนวณราคาทอง</title>
 
@@ -13,26 +16,81 @@
 
     <div class="container">
 
+        <!-- หัวข้อ -->
         <h1>คำนวณราคาทอง</h1>
 
-        <label>ราคาทอง</label>
-        <input type="number" id="goldPrice" placeholder="กรอกราคาทอง">
 
-        <label>เปอร์เซ็นต์ทอง</label>
-        <input type="number" id="goldPercent" placeholder="เช่น 96.5">
+        <!-- ราคาทองวันนี้ -->
+        <div class="today-price">
 
-        <label>น้ำหนัก (กรัม)</label>
-        <input type="number" id="goldWeight" placeholder="เช่น 5.32">
+            <div id="goldPriceToday">
+                ราคาทองวันนี้ กำลังโหลด...
+            </div>
 
-        <button onclick="calculate()">คำนวณ</button>
+            <div id="goldUpdateTime">
+                อัปเดตล่าสุด --:-- น.
+            </div>
 
-        <div id="result">
-            กรุณากรอกข้อมูล
         </div>
 
+
+        <!-- ราคาทอง -->
+        <div class="form-group">
+
+            <label>ราคาทอง</label>
+
+            <input
+                type="number"
+                id="goldPrice"
+                placeholder="  "
+            >
+
+        </div>
+
+
+        <!-- เปอร์เซ็นต์ทอง -->
+        <div class="form-group">
+
+            <label>เปอร์เซ็นต์ทอง</label>
+
+            <input
+                type="number"
+                id="goldPercent"
+                placeholder=" "
+            >
+
+        </div>
+
+
+        <!-- น้ำหนัก -->
+        <div class="form-group">
+
+            <label>น้ำหนัก (กรัม)</label>
+
+            <input
+                type="number"
+                id="goldWeight"
+                placeholder=""
+                step="0.01"
+            >
+
+        </div>
+
+
+        <!-- ปุ่มคำนวณ -->
+        <button onclick="calculate()">
+            คำนวณ
+        </button>
+
+
+        <!-- ผลลัพธ์ -->
+        <div id="result"></div>
+
     </div>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
