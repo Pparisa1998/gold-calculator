@@ -18,26 +18,34 @@ function calculate() {
         return;
     }
 
-    // ราคาทอง × 0.656
+    // ขั้นที่ 1: ราคาทอง × 0.656
     const pricePerGram = goldPrice * 0.656;
 
-    // คำนวณราคาสุดท้าย
-    const total =
-        pricePerGram *
-        (goldPercent / 100) *
-        goldWeight /
-        10;
+    // ขั้นที่ 2: คำนวณตามเปอร์เซ็นต์
+    const priceByPercent =
+        pricePerGram * (goldPercent / 100);
+
+    // ขั้นที่ 3: คูณน้ำหนัก
+    const priceByWeight =
+        priceByPercent * goldWeight;
+
+    // ขั้นที่ 4: เลื่อนจุดทศนิยม 1 ตำแหน่ง
+    const total = priceByWeight / 10;
 
     result.innerHTML = `
-        <div>ราคาต่อกรัม: ${pricePerGram.toLocaleString("th-TH", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-        })} บาท</div>
+        <div>
+            ราคาต่อกรัม: 
+            ${pricePerGram.toLocaleString("th-TH", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            })} บาท
+        </div>
 
         <br>
 
         <strong>
-            ผลลัพธ์: ${total.toLocaleString("th-TH", {
+            ราคาสุดท้าย: 
+            ${total.toLocaleString("th-TH", {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2
             })} บาท
