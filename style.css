@@ -1,47 +1,125 @@
+/* นำเข้าฟอนต์ Kanit จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+/* ตั้งค่าพื้นฐานให้ทุก Element */
+* {
+    box-sizing: border-box; /* รวม padding และ border ในขนาดของกล่อง */
+}
+
+/* ส่วนของหน้าเว็บทั้งหมด */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    margin: 0;
-    padding: 20px;
+    margin: 0; /* ลบระยะขอบเริ่มต้นของเว็บ */
+    min-height: 100vh; /* ความสูงอย่างน้อยเต็มหน้าจอ */
+
+    font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+    font-size: 16px; /* ขนาดตัวอักษรพื้นฐาน */
+
+    background: #FFF3E8; /* สีพื้นหลัง */
+    color: #3D2A20; /* สีตัวอักษรหลัก */
 }
 
+/* กล่องหลักที่ครอบเครื่องคำนวณ */
 .container {
-    max-width: 400px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
+    width: 100%; /* กว้างเต็มพื้นที่ */
+    max-width: 800px; /* แต่กว้างสุดไม่เกิน 800px */
+
+    margin: 40px auto; /* เว้นด้านบน-ล่าง 40px และจัดกลาง */
+    padding: 40px; /* ระยะห่างด้านใน */
+
+    background: #FFE2CC; /* สีพื้นหลังกล่อง */
+    border-radius: 30px; /* ทำมุมให้มน */
 }
 
+/* หัวข้อ คำนวณราคาทอง */
 h1 {
-    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-size: 32px; /* ขนาดหัวข้อ */
+    font-weight: 600; /* ความหนาตัวอักษร */
+
+    text-align: center; /* จัดข้อความตรงกลาง */
+    margin-bottom: 35px; /* ระยะห่างด้านล่าง */
+
+    color: #D95F02; /* สีหัวข้อ */
 }
 
+/* กลุ่มของ Label และ Input */
+.form-group {
+    margin-bottom: 20px; /* ระยะห่างระหว่างแต่ละช่อง */
+}
+
+/* ชื่อของช่องกรอก */
 label {
-    display: block;
-    margin-top: 15px;
+    display: block; /* ให้ขึ้นบรรทัดใหม่ */
+
+    font-size: 16px;
+    font-weight: 500;
+
+    margin-bottom: 8px; /* เว้นระยะก่อนช่องกรอก */
 }
 
+/* ช่องกรอกข้อมูล */
 input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    font-size: 18px;
+    width: 100%; /* กว้างเต็มกล่อง */
+    padding: 14px 18px; /* ระยะห่างภายใน */
+
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+
+    background: #FFFFFF; /* สีพื้นหลังช่องกรอก */
+    color: #3D2A20; /* สีข้อความ */
+
+    border: 1px solid #F2A365; /* เส้นขอบ */
+    border-radius: 18px; /* มุมมน */
+
+    outline: none; /* เอาเส้นขอบเริ่มต้นของเบราว์เซอร์ออก */
 }
 
+/* ตอนกำลังเลือกช่องกรอก */
+input:focus {
+    border: 2px solid #E8751A; /* เปลี่ยนขอบเป็นสีส้ม */
+}
+
+/* ปุ่มคำนวณ */
 button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 25px;
-    font-size: 18px;
-    cursor: pointer;
+    width: 100%; /* กว้างเต็มกล่อง */
+    padding: 14px 20px;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+    background: #E8751A; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีตัวหนังสือ */
+
+    border: none; /* ไม่มีเส้นขอบ */
+    border-radius: 20px; /* มุมมน */
+
+    cursor: pointer; /* เมาส์เป็นรูปมือเมื่อวางบนปุ่ม */
 }
 
+/* ตอนเอาเมาส์วางบนปุ่ม */
+button:hover {
+    background: #D95F02; /* เปลี่ยนเป็นสีส้มเข้ม */
+}
+
+/* กล่องแสดงผลลัพธ์ */
 #result {
-    margin-top: 25px;
-    padding: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
+    margin-top: 30px; /* เว้นระยะจากปุ่ม */
+    padding: 20px; /* ระยะห่างภายใน */
+
+    font-family: "Kanit", sans-serif;
+    font-size: 16px;
+
+    text-align: center; /* จัดข้อความตรงกลาง */
+
+    background: #FFF8F2; /* สีพื้นหลัง */
+    border-radius: 20px; /* มุมมน */
+}
+
+/* ข้อความผลลัพธ์ที่อยู่ใน <strong> */
+#result strong {
+    font-size: 20px; /* ขนาดใหญ่กว่าปกติ */
+    font-weight: 600;
+
+    color: #D95F02; /* สีส้มเข้ม */
 }
