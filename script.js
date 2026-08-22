@@ -14,7 +14,7 @@ function calculate() {
     const result = document.getElementById("result");
 
     if (!goldPrice || !goldPercent || !goldWeight) {
-        result.innerHTML = "กรุณากรอกข้อมูลให้ครบ";
+        result.innerHTML = "กรอกข้อมูลไม่ครบ";
         return;
     }
 
