@@ -84,6 +84,9 @@ button {
     width: 100%; /* กว้างเต็มกล่อง */
     padding: 14px 20px;
 
+    /* เว้นระยะระหว่างช่องน้ำหนักกับปุ่ม */
+    margin-top: 10px;
+
     font-family: "Kanit", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -103,7 +106,10 @@ button:hover {
 }
 
 /* กล่องแสดงผลลัพธ์ */
+/* ซ่อนไว้ก่อน เมื่อยังไม่ได้คำนวณ */
 #result {
+    display: none;
+
     margin-top: 30px; /* เว้นระยะจากปุ่ม */
     padding: 20px; /* ระยะห่างภายใน */
 
@@ -114,6 +120,11 @@ button:hover {
 
     background: #FFF8F2; /* สีพื้นหลัง */
     border-radius: 20px; /* มุมมน */
+}
+
+/* แสดงกล่องผลลัพธ์เมื่อคำนวณสำเร็จ */
+#result.show {
+    display: block;
 }
 
 /* ข้อความผลลัพธ์ที่อยู่ใน <strong> */
