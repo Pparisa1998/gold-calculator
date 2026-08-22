@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>คำนวณราคาทอง</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>คำนวณราคาทอง</h1>
+
+        <label>ราคาทอง</label>
+        <input type="number" id="goldPrice" placeholder="กรอกราคาทอง">
+
+        <label>เปอร์เซ็นต์ทอง</label>
+        <input type="number" id="goldPercent" placeholder="เช่น 96.5">
+
+        <label>น้ำหนัก (กรัม)</label>
+        <input type="number" id="goldWeight" placeholder="เช่น 5.32">
+
+        <button onclick="calculate()">คำนวณ</button>
+
+        <div id="result">
+            กรุณากรอกข้อมูล
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
