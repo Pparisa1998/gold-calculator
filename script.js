@@ -33,18 +33,9 @@ function calculate() {
     const total = priceByWeight / 10;
 
     result.innerHTML = `
-        <div>
-            ราคาต่อกรัม: 
-            ${pricePerGram.toLocaleString("th-TH", {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-            })} บาท
-        </div>
-
-        <br>
 
         <strong>
-            ราคาสุดท้าย: 
+            ราคา: 
             ${total.toLocaleString("th-TH", {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2
