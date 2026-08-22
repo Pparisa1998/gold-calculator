@@ -18,7 +18,7 @@ body {
     min-height: 100vh;
 
     font-family: "Kanit", sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 
     background: #FFF3E8;
     color: #3D2A20;
@@ -73,9 +73,8 @@ label {
     display: block;
     width: 100%;
 
-    /* ระยะจากข้อความ
-       ลงมาถึงช่องกรอก */
-    margin: 0 0 24px 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
 
     font-size: 16px;
     font-weight: 500;
