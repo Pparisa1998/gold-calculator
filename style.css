@@ -14,7 +14,7 @@
 }
 
 body {
-    margin: 0;
+    margin: 40;
     min-height: 100vh;
 
     font-family: "Kanit", sans-serif;
@@ -46,10 +46,10 @@ body {
 ================================ */
 
 h1 {
-    margin: 0 0 35px 0;
+    margin: 0 0 40px 0;
 
     font-family: "Kanit", sans-serif;
-    font-size: 32px;
+    font-size: 52px;
     font-weight: 600;
 
     text-align: center;
