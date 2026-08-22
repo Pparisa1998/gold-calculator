@@ -1,136 +1,205 @@
-/* นำเข้าฟอนต์ Kanit จาก Google Fonts */
+/* ================================
+   FONT
+================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
 
-/* ตั้งค่าพื้นฐานให้ทุก Element */
+
+/* ================================
+   BASIC
+================================ */
+
 * {
-    box-sizing: border-box; /* รวม padding และ border ในขนาดของกล่อง */
+    box-sizing: border-box;
 }
 
-/* ส่วนของหน้าเว็บทั้งหมด */
 body {
-    margin: 0; /* ลบระยะขอบเริ่มต้นของเว็บ */
-    min-height: 100vh; /* ความสูงอย่างน้อยเต็มหน้าจอ */
+    margin: 0;
+    min-height: 100vh;
 
-    font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
-    font-size: 16px; /* ขนาดตัวอักษรพื้นฐาน */
-
-    background: #FFF3E8; /* สีพื้นหลัง */
-    color: #3D2A20; /* สีตัวอักษรหลัก */
-}
-
-/* กล่องหลักที่ครอบเครื่องคำนวณ */
-.container {
-    width: 100%; /* กว้างเต็มพื้นที่ */
-    max-width: 800px; /* แต่กว้างสุดไม่เกิน 800px */
-
-    margin: 40px auto; /* เว้นด้านบน-ล่าง 40px และจัดกลาง */
-    padding: 40px; /* ระยะห่างด้านใน */
-
-    background: #FFE2CC; /* สีพื้นหลังกล่อง */
-    border-radius: 30px; /* ทำมุมให้มน */
-}
-
-/* หัวข้อ คำนวณราคาทอง */
-h1 {
     font-family: "Kanit", sans-serif;
-    font-size: 32px; /* ขนาดหัวข้อ */
-    font-weight: 600; /* ความหนาตัวอักษร */
+    font-size: 16px;
 
-    text-align: center; /* จัดข้อความตรงกลาง */
-    margin-bottom: 35px; /* ระยะห่างด้านล่าง */
-
-    color: #D95F02; /* สีหัวข้อ */
+    background: #FFF3E8;
+    color: #3D2A20;
 }
 
-/* กลุ่มของ Label และ Input */
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.container {
+    width: calc(100% - 80px);
+    max-width: 800px;
+
+    margin: 40px auto;
+    padding: 40px;
+
+    background: #FFE2CC;
+    border-radius: 30px;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+h1 {
+    margin: 0 0 35px 0;
+
+    font-family: "Kanit", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+
+    text-align: center;
+    color: #D95F02;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
 .form-group {
-    margin-bottom: 20px; /* ระยะห่างระหว่างแต่ละช่อง */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-/* ชื่อของช่องกรอก */
+
+/* LABEL */
+
 label {
-    display: block; /* ให้ขึ้นบรรทัดใหม่ */
+    display: block;
+    width: 100%;
+
+    margin-bottom: 8px;
 
     font-size: 16px;
     font-weight: 500;
-
-    margin-bottom: 8px; /* เว้นระยะก่อนช่องกรอก */
 }
 
-/* ช่องกรอกข้อมูล */
+
+/* INPUT */
+
 input {
-    width: 100%; /* กว้างเต็มกล่อง */
-    padding: 14px 18px; /* ระยะห่างภายใน */
+    display: block;
+
+    width: 100%;
+    height: 70px;
+
+    padding: 14px 18px;
 
     font-family: "Kanit", sans-serif;
     font-size: 16px;
 
-    background: #FFFFFF; /* สีพื้นหลังช่องกรอก */
-    color: #3D2A20; /* สีข้อความ */
+    background: #FFFFFF;
+    color: #3D2A20;
 
-    border: 1px solid #F2A365; /* เส้นขอบ */
-    border-radius: 18px; /* มุมมน */
+    border: 1px solid #F2A365;
+    border-radius: 18px;
 
-    outline: none; /* เอาเส้นขอบเริ่มต้นของเบราว์เซอร์ออก */
+    outline: none;
 }
 
-/* ตอนกำลังเลือกช่องกรอก */
+
 input:focus {
-    border: 2px solid #E8751A; /* เปลี่ยนขอบเป็นสีส้ม */
+    border: 2px solid #E8751A;
 }
 
-/* ปุ่มคำนวณ */
+
+/* ================================
+   CALCULATE BUTTON
+================================ */
+
 button {
-    width: 100%; /* กว้างเต็มกล่อง */
+    display: block;
+
+    width: 100%;
+    height: 70px;
+
+    margin-top: 10px;
     padding: 14px 20px;
 
-    /* เว้นระยะระหว่างช่องน้ำหนักกับปุ่ม */
-    margin-top: 10px;
-
     font-family: "Kanit", sans-serif;
     font-size: 16px;
     font-weight: 500;
 
-    background: #E8751A; /* สีพื้นหลังปุ่ม */
-    color: white; /* สีตัวหนังสือ */
+    background: #E8751A;
+    color: white;
 
-    border: none; /* ไม่มีเส้นขอบ */
-    border-radius: 20px; /* มุมมน */
+    border: none;
+    border-radius: 20px;
 
-    cursor: pointer; /* เมาส์เป็นรูปมือเมื่อวางบนปุ่ม */
+    cursor: pointer;
 }
 
-/* ตอนเอาเมาส์วางบนปุ่ม */
+
 button:hover {
-    background: #D95F02; /* เปลี่ยนเป็นสีส้มเข้ม */
+    background: #D95F02;
 }
 
-/* กล่องแสดงผลลัพธ์ */
-/* ซ่อนไว้ก่อน เมื่อยังไม่ได้คำนวณ */
+
+/* ================================
+   RESULT
+================================ */
+
 #result {
     display: none;
 
-    margin-top: 30px; /* เว้นระยะจากปุ่ม */
-    padding: 20px; /* ระยะห่างภายใน */
+    width: 100%;
+
+    margin-top: 30px;
+    padding: 20px;
 
     font-family: "Kanit", sans-serif;
     font-size: 16px;
 
-    text-align: center; /* จัดข้อความตรงกลาง */
+    text-align: center;
 
-    background: #FFF8F2; /* สีพื้นหลัง */
-    border-radius: 20px; /* มุมมน */
+    background: #FFF8F2;
+    border-radius: 20px;
 }
 
-/* แสดงกล่องผลลัพธ์เมื่อคำนวณสำเร็จ */
+
 #result.show {
     display: block;
 }
 
-/* ข้อความผลลัพธ์ที่อยู่ใน <strong> */
+
 #result strong {
-    font-size: 20px; /* ขนาดใหญ่กว่าปกติ */
+    font-size: 20px;
     font-weight: 600;
 
-    color: #D95F02; /* สีส้มเข้ม */
+    color: #D95F02;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 30px);
+
+        margin: 15px auto;
+        padding: 25px 20px;
+
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    input {
+        height: 65px;
+    }
+
+    button {
+        height: 65px;
+    }
 }
