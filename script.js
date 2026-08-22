@@ -30,7 +30,7 @@ function calculate() {
         priceByPercent * goldWeight;
 
     // ขั้นที่ 4: เลื่อนจุดทศนิยม 1 ตำแหน่ง
-    const total = priceByWeight / 10;
+    const total = priceByWeight / 100;
 
     result.innerHTML = `
         <div>
